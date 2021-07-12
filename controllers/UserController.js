@@ -1,5 +1,8 @@
 const { User } = require('../models')
 
+//
+// This should get all users. Maybe need this functionality if used as a social app ? like query all the users with the name A ?
+//
 const GetAllUsers = async (req, res) => {
   try {
     let userlist = await User.findAll()
@@ -8,6 +11,10 @@ const GetAllUsers = async (req, res) => {
     throw error
   }
 }
+
+//
+//This gets the user by id...Maybe need this functionality to view a user ?
+//
 
 const GetUserById = async (req, res) => {
   try {
@@ -21,6 +28,10 @@ const GetUserById = async (req, res) => {
   }
 }
 
+//
+//This should allow the user to update their profile as needed
+//
+
 const UpdateUser = async (req, res) => {
   try {
     let userId = parseInt(req.params.user_id)
@@ -33,6 +44,10 @@ const UpdateUser = async (req, res) => {
     throw error
   }
 }
+
+//
+//If a user feels they need to delete their profile.
+//
 
 const DeleteUser = async (req, res) => {
   try {

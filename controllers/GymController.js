@@ -81,6 +81,10 @@ const GetGymByLocation = async (req, res) => {
   }
 }
 
+//
+// Hopefully allow the gym id to be stored in user id to allow the user to pick their gym in their "saved"
+//
+
 const GetGymByUserId = async (req, res) => {
   try {
     const gym = await Gym.findByPk(req.params.user_id)

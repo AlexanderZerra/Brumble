@@ -1,5 +1,9 @@
 const { Model } = require('sequelize')
 
+//
+//User can have many comments. User can go to many gyms (different gym memberships ?)
+//
+
 module.exports = (sequelize, DataTypes) => {
   class User extends Model {
     static associate(models) {

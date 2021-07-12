@@ -1,5 +1,9 @@
 const { Model } = require('sequelize')
 
+//
+//Comment belongs to both User and Gym (User makes comment) (Gym has comments)
+//
+
 module.exports = (sequelize, DataTypes) => {
   class Comment extends Model {
     static associate(models) {

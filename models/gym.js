@@ -1,5 +1,9 @@
 const { Model } = require('sequelize')
 
+//
+//Gym belongs to User and Gyms can have many comments. Gyms can also have many Users ?
+//
+
 module.exports = (sequelize, DataTypes) => {
   class Gym extends Model {
     static associate(models) {
