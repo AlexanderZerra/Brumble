@@ -47,7 +47,7 @@ const UpdateGym = async (req, res) => {
 }
 
 //
-//Allows you to search for all Gyms
+//Allows you to search for all Gyms by any criteria
 //
 
 const GetAllGymsBySearch = async (req, res) => {
@@ -64,9 +64,37 @@ const GetAllGymsBySearch = async (req, res) => {
   res.send(results)
 }
 
+//
+//Allows you to get get gyms by location
+//
+
+const GetGymByLocation = async (req, res) => {
+  try {
+    let gymLocation = parseInt(req.params.location)
+    let gymsByLocation = await Gym.findAll({
+      where: { location: gymLocation },
+      returning: true
+    })
+    res.send(gymsByLocation)
+  } catch (error) {
+    throw error
+  }
+}
+
+const GetGymByUserId = async (req, res) => {
+  try {
+    const gym = await Gym.findByPk(req.params.user_id)
+    res.send(gym)
+  } catch (error) {
+    throw error
+  }
+}
+
 module.exports = {
   GetAllGyms,
   GetGymById,
   UpdateGym,
-  GetAllGymsBySearch
+  GetAllGymsBySearch,
+  GetGymByLocation,
+  GetGymByUserId
 }
