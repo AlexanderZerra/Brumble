@@ -1,0 +1,72 @@
+const { Gym } = require('../models/')
+
+//
+// This should allow you to get all gyms (as in a search to see all the gyms)
+//
+
+const GetAllGyms = async (req, res) => {
+  try {
+    let gymlist = await Gym.findAll()
+    res.send(gymlist)
+  } catch (error) {
+    throw error
+  }
+}
+
+//
+// This should allow you to get specific gyms related to your search
+//
+
+const GetGymById = async (req, res) => {
+  try {
+    const { payload } = res.locals
+    let gymId = parseInt(payload.id)
+    console.log(gymId)
+    let gymFound = await Gym.findByPk(gymId)
+    res.send(gymFound)
+  } catch (error) {
+    throw error
+  }
+}
+
+//
+// Should allow a user to update the gym they go to to add any additional features/comments
+//
+
+const UpdateGym = async (req, res) => {
+  try {
+    let gymId = parseInt(req.params.gym_id)
+    let updatedGym = await Gym.update(req.body, {
+      where: { id: gymId },
+      returning: true
+    })
+    res.send(updatedGym)
+  } catch (error) {
+    throw error
+  }
+}
+
+//
+//Allows you to search for all Gyms
+//
+
+const GetAllGymsBySearch = async (req, res) => {
+  let query = req.params.query
+  let compstring = `%${query}%`
+  const results = await Gym.findAll({
+    where: {
+      [Op.or]: [
+        { name: { [Op.iLike]: compstring } },
+        { description: { [Op.iLike]: compstring } }
+      ]
+    }
+  })
+  res.send(results)
+}
+
+module.exports = {
+  GetAllGyms,
+  GetGymById,
+  UpdateGym,
+  GetAllGymsBySearch
+}
