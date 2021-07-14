@@ -73,6 +73,10 @@ const GetCommentByGymId = async (req, res) => {
   }
 }
 
+//
+//Should allow you to delete a comment
+//
+
 const DeleteComment = async (req, res) => {
   try {
     let commentId = parseInt(req.params.comment_id)

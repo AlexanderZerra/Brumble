@@ -59,9 +59,30 @@ const DeleteUser = async (req, res) => {
   }
 }
 
+//
+// Allows you to create a user
+//
+
+const CreateUser = async (req, res) => {
+  try {
+    const user = await User.create({
+      name,
+      username,
+      email,
+      location,
+      bio,
+      image
+    })
+    res.send(user)
+  } catch (error) {
+    throw error
+  }
+}
+
 module.exports = {
   GetAllUsers,
   GetUserById,
   UpdateUser,
-  DeleteUser
+  DeleteUser,
+  CreateUser
 }

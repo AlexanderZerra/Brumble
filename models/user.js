@@ -1,22 +1,14 @@
+'use strict'
 const { Model } = require('sequelize')
-
-//
-//User can have many comments. User can go to many gyms (different gym memberships ?)
-//
-
 module.exports = (sequelize, DataTypes) => {
   class User extends Model {
+    /**
+     * Helper method for defining associations.
+     * This method is not a part of Sequelize lifecycle.
+     * The `models/index` file will call this method automatically.
+     */
     static associate(models) {
-      User.hasMany(models.Gym, {
-        foreignKey: 'user_id',
-        onDelete: 'CASCADE',
-        onUpdate: 'CASCADE'
-      })
-      User.hasMany(models.Comment, {
-        foreignKey: 'user_id',
-        onDelete: 'CASCADE',
-        onUpdate: 'CASCADE'
-      })
+      // define association here
     }
   }
   User.init(
@@ -26,7 +18,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false
       },
       username: {
-        types: DataTypes.STRING,
+        type: DataTypes.STRING,
         unique: true,
         allowNull: false
       },

@@ -1,4 +1,5 @@
 const { Gym } = require('../models/')
+const { Op } = require('sequelize')
 
 //
 // This should allow you to get all gyms (as in a search to see all the gyms)
