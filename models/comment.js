@@ -9,7 +9,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       Comment.belongsTo(models.User, {
-        foreginKey: 'user_id',
+        foreignKey: 'user_id',
         onDelete: 'CASCADE',
         onUpdate: 'CASCADE'
       })
@@ -22,19 +22,21 @@ module.exports = (sequelize, DataTypes) => {
   }
   Comment.init(
     {
-      user_id: {
+      userId: {
         type: DataTypes.INTEGER,
         allowNull: false,
         onDelete: 'CASCADE',
+        field: 'user_id',
         references: {
           model: 'users',
           key: 'id'
         }
       },
-      gym_id: {
+      gymId: {
         type: DataTypes.INTEGER,
         allowNull: false,
         onDelete: 'CASCADE',
+        field: 'gym_id',
         references: {
           model: 'gyms',
           key: 'id'

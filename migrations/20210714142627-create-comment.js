@@ -27,7 +27,8 @@ module.exports = {
         }
       },
       post: {
-        type: Sequelize.TEXT
+        type: Sequelize.TEXT,
+        allowNull: false
       },
       createdAt: {
         allowNull: false,
