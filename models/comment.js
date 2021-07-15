@@ -13,7 +13,7 @@ module.exports = (sequelize, DataTypes) => {
         onDelete: 'CASCADE',
         onUpdate: 'CASCADE'
       })
-      Commonet.belongsTo(models.Gym, {
+      Comment.belongsTo(models.Gym, {
         foreignKey: 'gym_id',
         onDelete: 'CASCADE',
         onUpdate: 'CASCADE'

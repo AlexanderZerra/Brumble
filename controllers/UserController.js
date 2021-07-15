@@ -18,11 +18,8 @@ const GetAllUsers = async (req, res) => {
 
 const GetUserById = async (req, res) => {
   try {
-    const { payload } = res.locals
-    let userId = parseInt(payload.id)
-    console.log(userId)
-    let userFound = await User.findByPk(userId)
-    res.send(userFound)
+    const user = await User.findByPk(req.params.user_id)
+    res.send(user)
   } catch (error) {
     throw error
   }
@@ -52,7 +49,7 @@ const UpdateUser = async (req, res) => {
 const DeleteUser = async (req, res) => {
   try {
     let userId = parseInt(req.params.user_id)
-    await User.destroy({ wehre: { id: userId } })
+    await User.destroy({ where: { id: userId } })
     res.send({ message: `Later Bro` })
   } catch (error) {
     throw error
@@ -65,14 +62,7 @@ const DeleteUser = async (req, res) => {
 
 const CreateUser = async (req, res) => {
   try {
-    const user = await User.create({
-      name,
-      username,
-      email,
-      location,
-      bio,
-      image
-    })
+    const user = await User.create(req.body)
     res.send(user)
   } catch (error) {
     throw error
