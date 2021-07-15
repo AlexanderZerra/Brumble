@@ -20,11 +20,8 @@ const GetAllGyms = async (req, res) => {
 
 const GetGymById = async (req, res) => {
   try {
-    const { payload } = res.locals
-    let gymId = parseInt(payload.id)
-    console.log(gymId)
-    let gymFound = await Gym.findByPk(gymId)
-    res.send(gymFound)
+    let gym = await Gym.findByPk(req.params.gym_id)
+    res.send(gym)
   } catch (error) {
     throw error
   }
@@ -84,11 +81,22 @@ const GetGymByLocation = async (req, res) => {
 
 //
 // Hopefully allow the gym id to be stored in user id to allow the user to pick their gym in their "saved"
+//OR
+// Allow the "owner of the gym" to post about "thier" gym and then users can post onto that gym ?
 //
 
 const GetGymByUserId = async (req, res) => {
   try {
     const gym = await Gym.findByPk(req.params.user_id)
+    res.send(gym)
+  } catch (error) {
+    throw error
+  }
+}
+
+const CreateGym = async (req, res) => {
+  try {
+    const gym = await Gym.create(req.body)
     res.send(gym)
   } catch (error) {
     throw error
@@ -101,5 +109,6 @@ module.exports = {
   UpdateGym,
   GetAllGymsBySearch,
   GetGymByLocation,
-  GetGymByUserId
+  GetGymByUserId,
+  CreateGym
 }
