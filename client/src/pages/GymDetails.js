@@ -12,15 +12,6 @@ import CreateComment from '../components/CreateComment'
 const GymDetails = (props) => {
   const [gym, setGym] = useState({})
   const [comments, setComments] = useState([])
-  // const [editGym, setEditGym] = useState({
-  //   name: '',
-  //   userId: '',
-  //   location: '',
-  //   description: '',
-  //   image: '',
-  //   rating: '',
-  //   spotter: ''
-  // })
 
   console.log(gym)
   const getGym = async () => {
