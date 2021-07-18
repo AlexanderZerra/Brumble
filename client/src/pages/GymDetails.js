@@ -7,9 +7,11 @@ import axios from 'axios'
 import { BASE_URL } from '../globals'
 
 import CommentCard from '../components/CommentCard'
+import CreateComment from '../components/CreateComment'
 
 const GymDetails = (props) => {
   const [gym, setGym] = useState({})
+  const [comments, setComments] = useState([])
   // const [editGym, setEditGym] = useState({
   //   name: '',
   //   userId: '',
@@ -19,10 +21,12 @@ const GymDetails = (props) => {
   //   rating: '',
   //   spotter: ''
   // })
+
   console.log(gym)
   const getGym = async () => {
     const res = await axios.get(`${BASE_URL}/gym/${props.match.params.id}`)
-    console.log(res.data[0])
+    console.log(props.match.params.id)
+    setComments(res.data[0].Comments)
     setGym(res.data[0])
   }
   useEffect(() => {
@@ -34,11 +38,12 @@ const GymDetails = (props) => {
       <button>Delete</button>
       <button>Edit</button>
       <h1>Comments</h1>
-      {gym.Comments
-        ? gym.Comments.map((comment, index) => (
+      {comments
+        ? comments.map((comment, index) => (
             <CommentCard key={index} comment={comment}></CommentCard>
           ))
         : null}
+      <CreateComment setComments={setComments} gymId={props.match.params.id} />
     </div>
   )
 }

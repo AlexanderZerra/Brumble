@@ -10,6 +10,7 @@ import { Route, Switch } from 'react-router-dom'
 import HomePage from './pages/HomePage'
 import GymList from './pages/GymList'
 import GymDetails from './pages/GymDetails'
+import CreateGym from './pages/CreateGym'
 
 import NavComponent from './components/NavComponent'
 // import ProfilePage from './pages/ProfilePage'
@@ -40,6 +41,11 @@ function App() {
           exact
           path="/gyms/:id"
           component={(props) => <GymDetails {...props} gyms={gyms} />}
+        />
+        <Route
+          exact
+          path="/create"
+          component={(props) => <CreateGym {...props} gyms={gyms} />}
         />
       </Switch>
     </div>

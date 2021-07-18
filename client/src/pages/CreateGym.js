@@ -9,20 +9,16 @@ const CreateGym = (props) => {
   const [location, setLocation] = useState('')
   const [rating, setRating] = useState('')
   const [description, setDescription] = useState('')
-  const [spotter, setSpotterAvail] = useState()
-  const [img, setImg] = useState('')
+  const [spotter, setSpotter] = useState(false)
+  const [image, setImage] = useState('')
+  const [userId, setUserId] = useState(1)
 
-  const toggleSpotter = () => {
-    if (spotterAvail === false) {
-      setSpotterAvail(true)
-    } else {
-      setSpotterAvail(false)
-    }
+  const handleImageChange = (e) => {
+    setImage(e.target.value)
   }
-  const handleImgChange = (e) => {
-    setImg(e.target.value)
+  const handleUserIdChange = (e) => {
+    setUserId(e.target.value)
   }
-
   const handleNameChange = (e) => {
     setName(e.target.value)
   }
@@ -35,58 +31,63 @@ const CreateGym = (props) => {
   const handleDescriptionChange = (e) => {
     setDescription(e.target.value)
   }
-  const handleSubmit = async () => {
-    const res = await axios.post(`${BASE_URL}/gyms`, {
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    const res = await axios.post(`${BASE_URL}/gym`, {
       name: name,
       location: location,
       rating: rating,
       description: description,
       spotter: spotter,
-      img: image
+      image: image,
+      userId: 1
     })
+    console.log(res)
+    props.history.push('/')
   }
-  const postGym = async () => {
-    const res = await axios.post(`${BASE_URL}/gym/${props.match.params.id}`)
-    postedGym(res.data)
-  }
-  useEffect(() => {
-    postGym()
-  }, [])
 
   return (
     // <Link to={`/gyms`}
     <div>
-      <form>
-        <Input
+      <form onSubmit={handleSubmit}>
+        <input
+          placeholder="Enter user code"
+          type="text"
+          value={userId}
+          onChange={handleUserIdChange}
+        />
+        <input
+          placeholder="Gym Name"
           label="Gym Name"
           type="text"
           value={name}
           onChange={handleNameChange}
           maxLength={255}
         />
-        <Input
+        <input
+          placeholder="Gym Description"
           label="Description"
           type="text"
           value={description}
           onChange={handleDescriptionChange}
           maxLength={255}
         />
-        <Input
+        <input
+          placeholder="Enter ZipCode"
           label="Enter Zip Code"
-          type="number"
+          type="text"
           value={location}
-          mix={5}
-          max={5}
           onChange={handleLocationChange}
         />
-        <Input
+        <input
           type="url"
           label="Gym Picture"
           value={image}
-          onChange={handleImgChange}
+          onChange={handleImageChange}
           placeholder="Image Link"
         />
-        <Input
+        <input
+          placeholder="Rating"
           label="Rate this Gym on a 0-5"
           type="number"
           value={rating}
@@ -94,13 +95,8 @@ const CreateGym = (props) => {
           max={5}
           onChange={handleRatingChange}
         />
-        <Input
-          label="Does this gym have a spooter?"
-          type="boolean"
-          value={spotter}
-          onChange={toggleSpotter}
-        />
-        <button label="Submit" onCLick={handleSubmit} />
+
+        <button type="submit">Submit</button>
       </form>
     </div>
   )
