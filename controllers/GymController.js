@@ -1,4 +1,4 @@
-const { Gym } = require('../models/')
+const { Gym, Comment } = require('../models/')
 const { Op } = require('sequelize')
 
 //
@@ -20,7 +20,10 @@ const GetAllGyms = async (req, res) => {
 
 const GetGymById = async (req, res) => {
   try {
-    let gym = await Gym.findByPk(req.params.gym_id)
+    const gym = await Gym.findAll({
+      where: { id: req.params.gym_id },
+      include: [{ model: Comment, attributes: ['post'] }]
+    })
     res.send(gym)
   } catch (error) {
     throw error
