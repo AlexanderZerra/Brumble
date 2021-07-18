@@ -32,4 +32,16 @@ const CreateUser = (props) => {
   const handleImageChange = (e) => {
     setImage(e.target.value)
   }
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    const res = await axios.post(`${BASE_URL}/user`, {
+      name: name,
+      location: location,
+      username: username,
+      email: email,
+      bio: bio,
+      image: image
+    })
+    props.history.push('/')
+  }
 }
