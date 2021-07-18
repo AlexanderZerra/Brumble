@@ -12,5 +12,24 @@ const CreateUser = (props) => {
   const [username, setUserName] = useState('')
   const [email, setEmail] = useState('')
   const [bio, setBio] = useState('')
-  const [image, setImage] = 
+  const [image, setImage] = useState('')
+
+  const handleNameChange = (e) => {
+    setName(e.target.value)
+  }
+  const handleLocationChange = (e) => {
+    setLocation(e.target.value)
+  }
+  const handleUserNameChange = (e) => {
+    setUserName(e.target.value)
+  }
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value)
+  }
+  const handleBioChange = (e) => {
+    setBio(e.target.value)
+  }
+  const handleImageChange = (e) => {
+    setImage(e.target.value)
+  }
 }
