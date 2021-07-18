@@ -44,4 +44,22 @@ const CreateUser = (props) => {
     })
     props.history.push('/')
   }
+  return (
+    <div>
+      <form onSubmit={handleSubmit}>
+        <input
+          placeholder="Your Name"
+          type="text"
+          value={name}
+          onChange={handleNameChange}
+        />
+        <input
+          placeholder="Zipcode"
+          type="text"
+          value={location}
+          onChange={handleLocationChange}
+        />
+      </form>
+    </div>
+  )
 }
