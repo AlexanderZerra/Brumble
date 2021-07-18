@@ -15,6 +15,7 @@ const NavComponent = (props) => {
       <Link to="/">Home</Link>
       <Link to="/gyms">View All Gyms</Link>
       <Link to="/create">Create a Gym</Link>
+      <Link to="/create/user">Create a User</Link>
     </div>
   )
 }

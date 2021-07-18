@@ -59,7 +59,33 @@ const CreateUser = (props) => {
           value={location}
           onChange={handleLocationChange}
         />
+        <input
+          placeholder="UserName"
+          type="text"
+          value={username}
+          onChange={handleUserNameChange}
+        />
+        <input
+          placeholder="email"
+          type="text"
+          value={email}
+          onChange={handleEmailChange}
+        />
+        <input
+          placeholder="About Me"
+          type="text"
+          value={bio}
+          onChange={handleBioChange}
+        />
+        <input
+          placeholder="Image Link"
+          type="url"
+          value={image}
+          onChange={handleImageChange}
+        />
+        <button type="submit"> Submit</button>
       </form>
     </div>
   )
 }
+export default CreateUser
