@@ -47,7 +47,6 @@ const CreateGym = (props) => {
   }
 
   return (
-    // <Link to={`/gyms`}
     <div>
       <form onSubmit={handleSubmit}>
         <input

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import { BASE_URL } from '../globals'
+
 const CreateComment = (props) => {
   const [userId, setUserId] = useState(0)
   const [gymId, setGymId] = useState(props.gymId)
