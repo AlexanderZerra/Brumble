@@ -12,7 +12,8 @@ import CreateComment from '../components/CreateComment'
 const GymDetails = (props) => {
   const [gym, setGym] = useState({})
   const [comments, setComments] = useState([])
-
+  console.log(gym)
+  console.log(comments)
   const getGym = async () => {
     const res = await axios.get(`${BASE_URL}/gym/${props.match.params.id}`)
 

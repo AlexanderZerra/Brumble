@@ -8,7 +8,7 @@ const CommentCard = (props) => {
   const handleDelete = async (e) => {
     try {
       props.history.push(`/`)
-      await axios.delete(`${BASE_URL}/comments/${userID}`)
+      await axios.delete(`${BASE_URL}/comments/${props.comment.id}`)
     } catch (error) {
       throw error
     }
@@ -28,11 +28,9 @@ const CommentCard = (props) => {
   // }
   return (
     <div>
-      {/* <p>{props.comment.post}</p>
-      <form onSubmit={handleSubmit}></form>
-      <button>Submit</button>
+      <p>{props.comment.post}</p>
 
-      <button onClick={() => props.handleDelete(props.id)}>Delete</button> */}
+      <button onClick={() => handleDelete(props.id)}>Delete</button>
     </div>
   )
 }

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import axios from 'axios'
 import { BASE_URL } from '../globals'
 const CreateComment = (props) => {
-  const [userId, setUserId] = useState('')
+  const [userId, setUserId] = useState(0)
   const [gymId, setGymId] = useState(props.gymId)
   const [post, setPost] = useState('')
 
@@ -19,7 +19,7 @@ const CreateComment = (props) => {
       gymId: gymId,
       post: post
     })
-    setUserId('')
+    setUserId(0)
     setPost('')
     props.setComments((comments) => [res.data, ...comments])
   }
@@ -28,7 +28,7 @@ const CreateComment = (props) => {
       <form onSubmit={handleSubmit}>
         <input
           placeholder="Enter your user code"
-          type="text"
+          type="number"
           value={userId}
           onChange={handleUserIdChange}
         />
