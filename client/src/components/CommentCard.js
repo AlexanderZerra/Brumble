@@ -3,7 +3,16 @@ import axios from 'axios'
 import { BASE_URL } from '../globals'
 
 const CommentCard = (props) => {
-  console.log(props.comment.post)
+  console.log(props.comment.id)
+
+  const handleDelete = async (e) => {
+    try {
+      props.history.push(`/`)
+      await axios.delete(`${BASE_URL}/comments/${userID}`)
+    } catch (error) {
+      throw error
+    }
+  }
 
   //
   //Should allow you to sumbit a comment ?

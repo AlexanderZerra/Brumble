@@ -13,10 +13,9 @@ const GymDetails = (props) => {
   const [gym, setGym] = useState({})
   const [comments, setComments] = useState([])
 
-  console.log(gym)
   const getGym = async () => {
     const res = await axios.get(`${BASE_URL}/gym/${props.match.params.id}`)
-    console.log(props.match.params.id)
+
     setComments(res.data[0].Comments)
     setGym(res.data[0])
   }
