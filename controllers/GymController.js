@@ -22,7 +22,7 @@ const GetGymById = async (req, res) => {
   try {
     const gym = await Gym.findAll({
       where: { id: req.params.gym_id },
-      include: [{ model: Comment, attributes: ['post'] }]
+      include: [{ model: Comment, attributes: ['post', 'id'] }]
     })
     res.send(gym)
   } catch (error) {

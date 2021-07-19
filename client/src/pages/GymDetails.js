@@ -12,6 +12,16 @@ import CreateComment from '../components/CreateComment'
 const GymDetails = (props) => {
   const [gym, setGym] = useState({})
   const [comments, setComments] = useState([])
+
+  const handleDelete = async (id) => {
+    try {
+      await axios.delete(`${BASE_URL}/comment/${id}`)
+      setComments(comments.filter((comment) => comment.id !== id))
+    } catch (error) {
+      throw error
+    }
+  }
+
   console.log(gym)
   console.log(comments)
   const getGym = async () => {
@@ -31,7 +41,11 @@ const GymDetails = (props) => {
       <h1>Comments</h1>
       {comments
         ? comments.map((comment, index) => (
-            <CommentCard key={index} comment={comment}></CommentCard>
+            <CommentCard
+              key={index}
+              comment={comment}
+              handleDelete={handleDelete}
+            ></CommentCard>
           ))
         : null}
       <CreateComment setComments={setComments} gymId={props.match.params.id} />

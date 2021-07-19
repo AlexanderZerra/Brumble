@@ -3,22 +3,26 @@ import axios from 'axios'
 import { BASE_URL } from '../globals'
 
 const CommentCard = (props) => {
-  console.log(props.comment.id)
+  console.log(props.comment)
 
-  const handleDelete = async (e) => {
-    try {
-      props.history.push(`/`)
-      await axios.delete(`${BASE_URL}/comments/${props.comment.id}`)
-    } catch (error) {
-      throw error
-    }
-  }
+  // const handleDelete = async (e) => {
+  //   try {
+  //     await axios.delete(`${BASE_URL}/comment/${props.comment.id}`)
+  //     props.setComments(
+  //       props.comments.filter((comment) => comment.id !== props.comment.id)
+  //     )
+  //   } catch (error) {
+  //     throw error
+  //   }
+  // }
 
   return (
     <div>
       <p>{props.comment.post}</p>
 
-      <button onClick={() => handleDelete(props.id)}>Delete</button>
+      <button onClick={() => props.handleDelete(props.comment.id)}>
+        Delete
+      </button>
     </div>
   )
 }
