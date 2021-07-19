@@ -36,8 +36,8 @@ const GymDetails = (props) => {
   return (
     <div>
       <h1>Gym Details</h1>
-      <button>Delete</button>
-      <button>Edit</button>
+      <button className="delete">Delete</button>
+      <button className="edit">Edit</button>
       <h1>Comments</h1>
       {comments
         ? comments.map((comment, index) => (

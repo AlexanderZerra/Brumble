@@ -25,7 +25,7 @@ const CreateComment = (props) => {
     props.setComments((comments) => [res.data, ...comments])
   }
   return (
-    <div>
+    <div className="form">
       <form onSubmit={handleSubmit}>
         <input
           placeholder="Enter your user code"
