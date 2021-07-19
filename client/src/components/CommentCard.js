@@ -14,18 +14,6 @@ const CommentCard = (props) => {
     }
   }
 
-  //
-  //Should allow you to sumbit a comment ?
-  //
-
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault()
-  //   await axios.put (`${}/comment/${}`,{
-  //     userId: props.user_id,
-  //     gymId: props.gym_id,
-  //     post: props.post
-  //   })
-  // }
   return (
     <div>
       <p>{props.comment.post}</p>
