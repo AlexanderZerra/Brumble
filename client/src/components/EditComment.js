@@ -14,7 +14,15 @@ const EditComment = (props) => {
     const res = await axios.put(`${BASE_URL}/comment/${props.comment.id}`, {
       post: edit
     })
+    const updateCommentArray = props.comments.map((comment) => {
+      if (comment.id === props.comment.id) {
+        return res.data[1][0]
+      }
+      return comment
+    })
+    props.setComments(updateCommentArray)
     setEdit('')
+    console.log(res.data[1][0])
   }
 
   return (

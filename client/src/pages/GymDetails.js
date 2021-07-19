@@ -44,6 +44,8 @@ const GymDetails = (props) => {
             <CommentCard
               key={index}
               comment={comment}
+              comments={comments}
+              setComments={setComments}
               handleDelete={handleDelete}
             ></CommentCard>
           ))
