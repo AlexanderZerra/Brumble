@@ -1,6 +1,5 @@
 import React from 'react'
 const HomePage = (props) => {
-  console.log(props.gyms)
   return (
     <div>
       <h1>Welcome to Brumble.</h1>
