@@ -5,6 +5,10 @@ import { BASE_URL } from '../globals'
 const CommentCard = (props) => {
   console.log(props.comment.post)
 
+  //
+  //Should allow you to sumbit a comment ?
+  //
+
   // const handleSubmit = async (e) => {
   //   e.preventDefault()
   //   await axios.put (`${}/comment/${}`,{
