@@ -35,10 +35,10 @@ const GymDetails = (props) => {
   }, [])
   return (
     <div>
-      <h1>Gym Details</h1>
+      <h1 className="gymdetails">Gym Details</h1>
       <button className="delete">Delete</button>
       <button className="edit">Edit</button>
-      <h1>Comments</h1>
+      <h1 className="gymdetails">Comments</h1>
       {comments
         ? comments.map((comment, index) => (
             <CommentCard

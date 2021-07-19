@@ -55,7 +55,7 @@
 } */
 .header {
   font-size: 50px;
-  /* color: yellow; */
+  color: yellow;
   font-family: 'Black Ops One', cursive;
 }
 
@@ -80,4 +80,14 @@ button {
 }
 .allgyms {
   font-family: 'Bungee Shade', cursive;
+}
+.gymdetails {
+  font-family: 'Bungee Shade', cursive;
+}
+body {
+  background-image: url('../styles/javier-santos-guzman-9MR78HGoflw-unsplash.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: scale-down;
+  margin: auto;
 }
