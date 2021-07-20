@@ -47,7 +47,7 @@ const CreateGym = (props) => {
   }
 
   return (
-    <div>
+    <div className="createall">
       <h1 className="formhead">Add your Gym BRO</h1>
       <body className="formbody">
         <div className="formgym">

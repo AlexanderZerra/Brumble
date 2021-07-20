@@ -150,3 +150,12 @@ p.userp {
   color: black;
   text-align: center;
 }
+.formbody {
+  background-color: blue;
+}
+.createall {
+  background-color: green;
+}
+h1.formhead {
+  margin: auto;
+}
