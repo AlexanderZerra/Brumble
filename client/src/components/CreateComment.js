@@ -25,22 +25,24 @@ const CreateComment = (props) => {
     props.setComments((comments) => [res.data, ...comments])
   }
   return (
-    <div className="form">
-      <form onSubmit={handleSubmit}>
-        <input
-          placeholder="Enter your user code"
-          type="number"
-          value={userId}
-          onChange={handleUserIdChange}
-        />
-        <input
-          placeholder="Your Comment"
-          type="text"
-          value={post}
-          onChange={handlePostChange}
-        />
-        <button type="submit">Submit</button>
-      </form>
+    <div className="comment-background">
+      <div className="form">
+        <form onSubmit={handleSubmit}>
+          <input
+            placeholder="Enter your user code"
+            type="number"
+            value={userId}
+            onChange={handleUserIdChange}
+          />
+          <input
+            placeholder="Your Comment"
+            type="text"
+            value={post}
+            onChange={handlePostChange}
+          />
+          <button type="submit">Submit</button>
+        </form>
+      </div>
     </div>
   )
 }

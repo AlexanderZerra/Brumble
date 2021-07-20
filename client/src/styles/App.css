@@ -87,7 +87,7 @@ h1.header {
   background-image: url('../styles/javier-santos-guzman-9MR78HGoflw-unsplash.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  object-fit: scale-down;
+
   margin: auto;
 }
 
@@ -117,7 +117,7 @@ body.allofit {
   /* background-image: url('../styles/buildgym.jpeg'); */
   /* background-repeat: no-repeat;
   background-size: cover; */
-  background-color: blue;
+  background-color: grey;
 }
 
 .allgymshead {
@@ -132,9 +132,13 @@ h1.allgymshead {
 
 /* Gym Details Style */
 
-.gymdetails {
-  font-family: 'Bungee Shade', cursive;
+/* h1.gymdetails {
+  font-family: 'Black Ops One', cursive;
+  background-color: yellow;
 }
+.backgroundcolor {
+  background-color: blue;
+} */
 
 /* Button Style */
 
@@ -200,5 +204,15 @@ form.formform {
   background-color: yellow;
 }
 h1.formhead {
+  margin: auto;
+}
+
+/* Create Comment Style */
+.comment-background {
+  background-color: blue;
+}
+h1.gymcomments {
+  font-family: 'Black Ops One', cursive;
+  background-color: yellow;
   margin: auto;
 }

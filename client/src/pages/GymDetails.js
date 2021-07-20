@@ -35,22 +35,27 @@ const GymDetails = (props) => {
   }, [])
   return (
     <div>
-      <h1 className="gymdetails">Gym Details</h1>
-      <button className="delete">Delete</button>
-      <button className="edit">Edit</button>
-      <h1 className="gymdetails">Comments</h1>
-      {comments
-        ? comments.map((comment, index) => (
-            <CommentCard
-              key={index}
-              comment={comment}
-              comments={comments}
-              setComments={setComments}
-              handleDelete={handleDelete}
-            ></CommentCard>
-          ))
-        : null}
-      <CreateComment setComments={setComments} gymId={props.match.params.id} />
+      <div className="backgroundcolor">
+        {/* <h1 className="gymdetails">Gym Details</h1> */}
+        {/* <button className="delete">Delete</button> */}
+        {/* <button className="edit">Edit</button> */}
+        <h1 className="gymcomments">Comments</h1>
+        {comments
+          ? comments.map((comment, index) => (
+              <CommentCard
+                key={index}
+                comment={comment}
+                comments={comments}
+                setComments={setComments}
+                handleDelete={handleDelete}
+              ></CommentCard>
+            ))
+          : null}
+        <CreateComment
+          setComments={setComments}
+          gymId={props.match.params.id}
+        />
+      </div>
     </div>
   )
 }
