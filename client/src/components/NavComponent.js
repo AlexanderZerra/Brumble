@@ -7,8 +7,9 @@ const NavComponent = (props) => {
         display: 'flex',
         alignItems: 'center',
         borderBottom: '1px solid black',
-        padding: '16px',
-        width: '100%',
+        padding: '5px',
+        width: '99.1vw',
+        height: '8vh',
         justifyContent: 'space-around',
         backgroundColor: 'black'
       }}

@@ -87,6 +87,8 @@ h1.header {
   background-image: url('../styles/javier-santos-guzman-9MR78HGoflw-unsplash.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  height: 90.1vh;
+  width: 100vw;
 
   margin: auto;
 }
@@ -163,6 +165,8 @@ button {
 
 .userinput {
   background-color: blue;
+  height: 89.99vh;
+  width: 100vw;
 }
 .formuser {
   display: flex;
@@ -199,6 +203,8 @@ form.formform {
 }
 .formbody {
   background-color: blue;
+  height: 84.5vh;
+  width: 100vw;
 }
 .createall {
   background-color: yellow;
