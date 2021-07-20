@@ -12,12 +12,20 @@ import GymList from './pages/GymList'
 import GymDetails from './pages/GymDetails'
 import CreateGym from './pages/CreateGym'
 import CreateUser from './pages/CreateUser'
+import UserList from './pages/UserList'
 
 import NavComponent from './components/NavComponent'
 // import ProfilePage from './pages/ProfilePage'
 
 function App() {
   const [gyms, setGyms] = useState([])
+  const [users, setUsers] = useState([])
+
+  const getAllUsers = async (id) => {
+    const res = await axios.get(`${BASE_URL}/user`)
+    console.log(res.data)
+    setUsers(res.data)
+  }
 
   const getAllGyms = async (id) => {
     const res = await axios.get(`${BASE_URL}/gym`)
@@ -26,17 +34,25 @@ function App() {
   }
   useEffect(() => {
     getAllGyms()
+    getAllUsers()
   }, [])
 
   return (
     <div className="App">
-      <NavComponent />
+      <div className="nav">
+        <NavComponent />
+      </div>
       <Switch>
         <Route exact path="/" component={(props) => <HomePage {...props} />} />
         <Route
           exact
           path="/gyms"
           component={(props) => <GymList {...props} gyms={gyms} />}
+        />
+        <Route
+          exact
+          path="/users"
+          component={(props) => <UserList {...props} users={users} />}
         />
         <Route
           exact

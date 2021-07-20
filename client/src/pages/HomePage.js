@@ -1,7 +1,7 @@
 import React from 'react'
 const HomePage = (props) => {
   return (
-    <body>
+    <body className="homebody">
       <div className="body">
         <div className="home">
           <h1 className="header">Welcome to Brumble.</h1>

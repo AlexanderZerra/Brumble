@@ -45,7 +45,7 @@ const CreateUser = (props) => {
     props.history.push('/')
   }
   return (
-    <div>
+    <div className="userinput">
       <form onSubmit={handleSubmit}>
         <input
           placeholder="Your Name"
