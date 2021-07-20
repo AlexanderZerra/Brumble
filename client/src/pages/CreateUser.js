@@ -48,47 +48,45 @@ const CreateUser = (props) => {
     <div className="userinput">
       <h1 className="userhead">Insert your Info BROSKI</h1>
       <body className="formuser">
-        <div className="formuseruser">
-          <form onSubmit={handleSubmit} className="formuser">
-            <input
-              placeholder="Your Name"
-              type="text"
-              value={name}
-              onChange={handleNameChange}
-            />
-            <input
-              placeholder="Zipcode"
-              type="text"
-              value={location}
-              onChange={handleLocationChange}
-            />
-            <input
-              placeholder="UserName"
-              type="text"
-              value={username}
-              onChange={handleUserNameChange}
-            />
-            <input
-              placeholder="email"
-              type="text"
-              value={email}
-              onChange={handleEmailChange}
-            />
-            <input
-              placeholder="About Me"
-              type="text"
-              value={bio}
-              onChange={handleBioChange}
-            />
-            <input
-              placeholder="Image Link"
-              type="url"
-              value={image}
-              onChange={handleImageChange}
-            />
-            <button type="submit"> Submit</button>
-          </form>
-        </div>
+        <form onSubmit={handleSubmit} className="formuser">
+          <input
+            placeholder="Your Name"
+            type="text"
+            value={name}
+            onChange={handleNameChange}
+          />
+          <input
+            placeholder="Zipcode"
+            type="text"
+            value={location}
+            onChange={handleLocationChange}
+          />
+          <input
+            placeholder="UserName"
+            type="text"
+            value={username}
+            onChange={handleUserNameChange}
+          />
+          <input
+            placeholder="email"
+            type="text"
+            value={email}
+            onChange={handleEmailChange}
+          />
+          <input
+            placeholder="About Me"
+            type="text"
+            value={bio}
+            onChange={handleBioChange}
+          />
+          <input
+            placeholder="Image Link"
+            type="url"
+            value={image}
+            onChange={handleImageChange}
+          />
+          <button type="submit"> Submit</button>
+        </form>
       </body>
     </div>
   )

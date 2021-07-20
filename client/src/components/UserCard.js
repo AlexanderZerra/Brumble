@@ -18,8 +18,8 @@ const UserCard = (props) => {
         >
           <h3>{user.name}</h3>
           <p>Location:{user.location}</p>
-          <p>{user.image}</p>
         </div>
+        <img src={user.image} className="user-photo"></img>
       </div>
     </Link>
   )

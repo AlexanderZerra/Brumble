@@ -48,7 +48,7 @@ const CreateGym = (props) => {
 
   return (
     <div className="createall">
-      <h1 className="formhead">Add your Gym BRO</h1>
+      <h1 className="formhead">Add your Gym </h1>
       <body className="formbody">
         <div className="formgym">
           <form onSubmit={handleSubmit} className="formform">

@@ -4,7 +4,7 @@ import UserCard from '../components/UserCard'
 
 const UserList = (props) => {
   return (
-    <body className="alluser">
+    <body className="allofit">
       <div>
         <h1 className="allusers">All Bros</h1>
         <p className="userp">
