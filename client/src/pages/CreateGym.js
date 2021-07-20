@@ -48,55 +48,60 @@ const CreateGym = (props) => {
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
-        <input
-          placeholder="Enter user code"
-          type="text"
-          value={userId}
-          onChange={handleUserIdChange}
-        />
-        <input
-          placeholder="Gym Name"
-          label="Gym Name"
-          type="text"
-          value={name}
-          onChange={handleNameChange}
-          maxLength={255}
-        />
-        <input
-          placeholder="Gym Description"
-          label="Description"
-          type="text"
-          value={description}
-          onChange={handleDescriptionChange}
-          maxLength={255}
-        />
-        <input
-          placeholder="Enter ZipCode"
-          label="Enter Zip Code"
-          type="text"
-          value={location}
-          onChange={handleLocationChange}
-        />
-        <input
-          type="url"
-          label="Gym Picture"
-          value={image}
-          onChange={handleImageChange}
-          placeholder="Image Link"
-        />
-        <input
-          placeholder="Rating"
-          label="Rate this Gym on a 0-5"
-          type="number"
-          value={rating}
-          min={0}
-          max={5}
-          onChange={handleRatingChange}
-        />
+      <h1 className="formhead">Add your Gym BRO</h1>
+      <body className="formbody">
+        <div className="formgym">
+          <form onSubmit={handleSubmit} className="formform">
+            <input
+              placeholder="Enter user code"
+              type="text"
+              value={userId}
+              onChange={handleUserIdChange}
+            />
+            <input
+              placeholder="Gym Name"
+              label="Gym Name"
+              type="text"
+              value={name}
+              onChange={handleNameChange}
+              maxLength={255}
+            />
+            <input
+              placeholder="Gym Description"
+              label="Description"
+              type="text"
+              value={description}
+              onChange={handleDescriptionChange}
+              maxLength={255}
+            />
+            <input
+              placeholder="Enter ZipCode"
+              label="Enter Zip Code"
+              type="text"
+              value={location}
+              onChange={handleLocationChange}
+            />
+            <input
+              type="url"
+              label="Gym Picture"
+              value={image}
+              onChange={handleImageChange}
+              placeholder="Image Link"
+            />
+            <input
+              placeholder="Rating"
+              label="Rate this Gym on a 0-5"
+              type="number"
+              value={rating}
+              min={0}
+              max={5}
+              onChange={handleRatingChange}
+            />
 
-        <button type="submit">Submit</button>
-      </form>
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      </body>
     </div>
   )
 }

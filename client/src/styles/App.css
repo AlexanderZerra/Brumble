@@ -54,6 +54,9 @@
   font-family: 'Black Ops One', cursive;
   text-align: center;
 }
+h1.header {
+  margin: 0;
+}
 
 button {
   border-radius: 12px;
@@ -82,6 +85,9 @@ button {
   text-align: center;
   font-size: 50px;
 }
+h1.allgyms {
+  margin: 0;
+}
 .gymdetails {
   font-family: 'Bungee Shade', cursive;
 }
@@ -105,4 +111,39 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+div.formgym {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+h1.formhead {
+  text-align: center;
+  font-family: 'Black Ops One', cursive;
+}
+form.formform {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+form.formuser {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+h1.userhead {
+  text-align: center;
+  font-family: 'Black Ops One', cursive;
+}
+h1.allusers {
+  text-align: center;
+  font-family: 'Black Ops One', cursive;
+}
+p.userp {
+  font-family: 'Jura', sans-serif;
+  text-shadow: 2px 2px 5px red;
+  color: black;
+  text-align: center;
 }
