@@ -14,7 +14,7 @@ const DeleteComment = (props) => {
     }
   }
   return (
-    <div>
+    <div className="deletebutton">
       <form onSubmit={handleDelete}>
         <button type="delete">Delete</button>
       </form>

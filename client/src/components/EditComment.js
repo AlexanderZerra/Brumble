@@ -26,7 +26,7 @@ const EditComment = (props) => {
   }
 
   return (
-    <div>
+    <div className="editcomment">
       <form onSubmit={handleSubmit}>
         <input
           placeholder="Enter New Text"

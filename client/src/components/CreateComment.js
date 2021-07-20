@@ -26,7 +26,7 @@ const CreateComment = (props) => {
   }
   return (
     <div className="comment-background">
-      <div className="form">
+      <div className="commentform">
         <form onSubmit={handleSubmit}>
           <input
             placeholder="Enter your user code"

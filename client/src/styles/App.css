@@ -86,7 +86,8 @@ h1.header {
 .homebody {
   background-image: url('../styles/javier-santos-guzman-9MR78HGoflw-unsplash.jpg');
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100%, 100%;
+
   height: 90.1vh;
   width: 100vw;
 
@@ -215,10 +216,29 @@ h1.formhead {
 
 /* Create Comment Style */
 .comment-background {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 83.3vh;
   background-color: blue;
 }
 h1.gymcomments {
   font-family: 'Black Ops One', cursive;
   background-color: yellow;
   margin: auto;
+
+  align-items: center;
+  text-align: center;
+}
+.commentform {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Edit Comment Style */
+.editcomment {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
