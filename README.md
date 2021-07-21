@@ -6,17 +6,14 @@
 ## Created & Coded By:
 [Alex Zerra](https://www.linkedin.com/in/alexander-zerra-a2737788/)
 
-!
 
-[Trello Board for Project]()
-***
 
 ## Description
 **Brumble App** is an app for reviewing gyms for all to expierence. Here at **Brumble** we want all skill levels to feel confidient in joining the fit fam. Youll notice that gyms have ratings and spotters. Never again will you have to sacrifice the **GAINZ** because you came to the gym without a gym buddy.
 ***
 
 ## Tech Used
-PostreSQL | Express | React.js | Node.js | JavaScript (ES6) | HTML5 | CSS3
+PostgreSQL | Express | React.js | Node.js | JavaScript (ES6) | HTML5 | CSS3
 
 ***
 
@@ -26,18 +23,20 @@ Looking for an expierenced gym buddy ?  You have come to the right place. First 
 ***
 
 ## App Design
-![Retriever App Component Hierarchy Diagram](./assets/images/retriever_CHD.png)
-![Retriever App Entity Relationship Diagram](./assets/images/Retriever_ERD.png)
+![Brumble ERD](./images/erd.png)
+![Brumble CRD](./images/crd.png)
 
 ***
 
-## Screenshots from Retriever App
-![Login](./assets/images/loginPage.png)
-![Mantis](./assets/images/homepage-mantis.png)
-![Ball Python](./assets/images/homepage-BP.png)
-![Pets](./assets/images/browsePets.png)
-![Post a Pet](./assets/images/postPet.png)
-![Profile Page](./assets/images/profilePage.png)
+## Trello ##
+![Trello](https://trello.com/b/YruvXTMJ/brumble)
+
+***
+
+## Screenshots from Brumble App
+![Troubleshooting](./images/troubleshoot.png)
+![All Gym](./images/allgym.png)
+![Home Page](./images/homepage.png)
 ***
 
 ## Frontend Requirements
@@ -74,3 +73,6 @@ Looking for an expierenced gym buddy ?  You have come to the right place. First 
 ## Credits
 - `DRAW.IO`: [ERD](https://app.diagrams.net/)
 - `DRAW.IO`: [CHD](https://app.diagrams.net/)
+- `PHOTO`: [image](https://unsplash.com/photos/9MR78HGoflw?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink)
+- Michael and Andre: For being some of the coolest teachers ive ever had. Thank you for the journey into coding.
+- Hunter: Thank you Hunter for the guiding hand through all of this. 
