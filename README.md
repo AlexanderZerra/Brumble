@@ -73,6 +73,6 @@ Looking for an expierenced gym buddy ?  You have come to the right place. First 
 ## Credits
 - `DRAW.IO`: [ERD](https://app.diagrams.net/)
 - `DRAW.IO`: [CHD](https://app.diagrams.net/)
-- `PHOTO`: [image](https://unsplash.com/photos/9MR78HGoflw?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink)
+- `PHOTO`: [image](https://unsplash.com/photos/9MR78HGoflw?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink) credit for the homepage picture.
 - Michael and Andre: For being some of the coolest teachers ive ever had. Thank you for the journey into coding.
 - Hunter: Thank you Hunter for the guiding hand through all of this. 
