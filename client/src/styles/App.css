@@ -150,6 +150,8 @@ button {
   background: #808632;
   box-shadow: inset 9px 9px 17px #333614, inset -9px -9px 17px #cdd650;
   color: white;
+  width: 220px;
+  padding: 8px;
 }
 .delete {
   border-radius: 12px;
@@ -197,7 +199,7 @@ h1.formhead {
   text-align: center;
   font-family: 'Black Ops One', cursive;
 }
-form.formform {
+.formform {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -241,4 +243,13 @@ h1.gymcomments {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+/* ALL Input */
+input {
+  width: 200px;
+  margin: 12px;
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
 }
