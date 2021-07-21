@@ -6,7 +6,6 @@ import { BASE_URL } from './globals'
 
 import { Route, Switch } from 'react-router-dom'
 
-// import GymPage from './pages/GymPage'
 import HomePage from './pages/HomePage'
 import GymList from './pages/GymList'
 import GymDetails from './pages/GymDetails'
@@ -15,7 +14,6 @@ import CreateUser from './pages/CreateUser'
 import UserList from './pages/UserList'
 
 import NavComponent from './components/NavComponent'
-// import ProfilePage from './pages/ProfilePage'
 
 function App() {
   const [gyms, setGyms] = useState([])
@@ -23,13 +21,13 @@ function App() {
 
   const getAllUsers = async (id) => {
     const res = await axios.get(`${BASE_URL}/user`)
-    console.log(res.data)
+
     setUsers(res.data)
   }
 
   const getAllGyms = async (id) => {
     const res = await axios.get(`${BASE_URL}/gym`)
-    console.log(res.data)
+
     setGyms(res.data)
   }
   useEffect(() => {
