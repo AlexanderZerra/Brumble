@@ -63,10 +63,10 @@ Looking for an expierenced gym buddy ?  You have come to the right place. First 
 - [] Gym Quiz to match skill levels
 - [] Authentication for users to have saved logged in
 - [] React library to add more touches
-- MAPBOX to show gyms on a locational map
-- Messaging between users
-- Resources for workouts/mealprep/supplements etc etc
-- Verified users such as "trainers"
+- [] MAPBOX to show gyms on a locational map
+- [] Messaging between users
+- [] Resources for workouts/mealprep/supplements etc etc
+- [] Verified users such as "trainers"
 
 ***
 
