@@ -86,7 +86,7 @@ h1.header {
 .homebody {
   background-image: url('../styles/javier-santos-guzman-9MR78HGoflw-unsplash.jpg');
   background-repeat: no-repeat;
-  background-size: 100%, 100%;
+  background-size: cover;
 
   height: 90.1vh;
   width: 100vw;
