@@ -1,8 +1,12 @@
 {
   "name": "brumble",
   "version": "1.0.0",
-  "description": "",
+  "description": "a cool gym app",
   "main": "server.js",
+  "engines": {
+    "node": "14.x"
+  },
+
   "scripts": {
     "dev": "nodemon server.js",
     "start": "node server.js",
