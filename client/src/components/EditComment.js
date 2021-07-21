@@ -23,7 +23,6 @@ const EditComment = (props) => {
     props.setComments(updateCommentArray)
     setEdit('')
     props.setToggle(false)
-    console.log(res.data[1][0])
   }
 
   return (
