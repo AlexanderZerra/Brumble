@@ -22,8 +22,6 @@ const GymDetails = (props) => {
     }
   }
 
-  console.log(gym)
-  console.log(comments)
   const getGym = async () => {
     const res = await axios.get(`${BASE_URL}/gym/${props.match.params.id}`)
 
@@ -36,9 +34,6 @@ const GymDetails = (props) => {
   return (
     <div>
       <div className="backgroundcolor">
-        {/* <h1 className="gymdetails">Gym Details</h1> */}
-        {/* <button className="delete">Delete</button> */}
-        {/* <button className="edit">Edit</button> */}
         <h1 className="gymcomments">Comments</h1>
         {comments
           ? comments.map((comment, index) => (
