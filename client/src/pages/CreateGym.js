@@ -42,7 +42,7 @@ const CreateGym = (props) => {
       image: image,
       userId: 1
     })
-    console.log(res)
+
     props.history.push('/')
   }
 
